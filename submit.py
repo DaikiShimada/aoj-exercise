@@ -29,6 +29,7 @@ def wait_judge(previous, interval=5, trial=10):
         latest = get_latest_id()
         if latest != previous:
             break
+        cnt += 1
         time.sleep(interval)
     judge = aojtool.api.judge(latest)
     return judge
